@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "idcategoria": 1,
+        "nombre": "Reloj Horus",
+        "precio": 24900,
+        "img": "reloj_horus.png"
+    },
+    {
+        "id": 2,
+        "idcategoria": 1,
+        "nombre": "Reloj Brown",
+        "precio": 24900,
+        "img": "reloj_brown.png"
+    },
+    {
+        "id": 3,
+        "idcategoria": 1,
+        "nombre": "Reloj Black",
+        "precio": 24900,
+        "img": "reloj_black.png"
+    },
+    {
+        "id": 4,
+        "idcategoria": 1,
+        "nombre": "Reloj White",
+        "precio": 24900,
+        "img": "reloj_white.png"
+    },
+    {
+        "id": 5,
+        "idcategoria": 2,
+        "nombre": "Lente Black",
+        "precio": 15000,
+        "img": "lentes_black.png"
+    },
+    {
+        "id": 6,
+        "idcategoria": 2,
+        "nombre": "Lente Blue",
+        "precio": 15000,
+        "img": "lentes_blue.png"
+    },
+    {
+        "id": 7,
+        "idcategoria": 2,
+        "nombre": "Lente Brown",
+        "precio": 15000,
+        "img": "lentes_brown.png"
+    },
+    {
+        "id": 8,
+        "idcategoria": 2,
+        "nombre": "Lente Green",
+        "precio": 15000,
+        "img": "lentes_green.png"
+    }
+]

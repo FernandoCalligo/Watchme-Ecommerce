@@ -1,22 +1,24 @@
-import React,{useState,useEffect} from 'react';
-import '../styles/ItemListConteiner.css'
+import React,{useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 
-const Producto = () => {
+const Relojes = ({categoria}) => {
+
+    console.log(categoria)
     const [producto, setProducto] = useState([]);
 
     useEffect(() => {
         const consultarbdd = async () => {
             const res = await fetch(`${process.env.PUBLIC_URL}/json/productos.json`) // ${process.env.PUBLIC_URL} utilice esto porque no podia acceder a la carpeta public
             const productos = await res.json()
+            const newarray = productos.filter(productos => productos.idcategoria === categoria)
 
-            /* console.log(productos) */
+            /* console.log(newarray) */
 
-            const card = productos.map(prod =>
+            const card = newarray.map(prod =>
             <div className='row'>
                 <div className="cont">
                     <div className="circle"></div>
-                    <img src={`${process.env.PUBLIC_URL}/img/${prod.img}`} alt="" />
+                    <img src={`${process.env.PUBLIC_URL}/img/${prod.img}`} alt={`${prod.img}`} />
                     <div className="info">
                         <div className="infoIcon">
                             <div className="icon">
@@ -32,7 +34,7 @@ const Producto = () => {
                     <p className='precioprod'>${prod.precio}</p>
                 </div>
                 <span>6 cuotas sin interes de ${prod.precio / 6}</span>
-                <button class="btn btn-primary"><Link className='nav-link active' to={`/item/${prod.id}`}>Ver Producto</Link></button>
+                <button className="btn btn-primary"><Link className='nav-link active' to={`/item/${prod.id}`}>Ver Producto</Link></button>
             </div>
             )
 
@@ -42,12 +44,10 @@ const Producto = () => {
         consultarbdd().then(producto => setProducto(producto))
     }, []);
     return (
-        <>
+        <div className="productcont">
             {producto}
-        </>
-    );
+        </div>
+        );
 }
 
-{/* <p>{prodcuto.map(item => <img key={item.id} src={`${process.env.PUBLIC_URL}/img/${item.img}`} alt={item.img} />)}</p> */}
-
-export default Producto;
+export default Relojes;

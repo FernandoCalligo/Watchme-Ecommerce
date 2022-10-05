@@ -1,0 +1,68 @@
+.DetailCont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.DetailContInf {
+    display: flex;
+}
+
+.imgCont img {
+    width: 30vw;
+}
+
+.infoCont {
+    width: 30vw;
+    padding: 50px 50px;
+}
+
+.infoCont h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.infoCont p {
+    margin: 20px 0px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.contCantidad{
+    margin: 6rem 0 1rem 0;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border: 2px solid black;
+}
+
+.contCantidad span {
+    padding: 4px 12px;
+    font-size: 18px;
+}
+
+.contCantidad .btn {
+    font-size: 15px;
+}
+
+.buttonAgregar {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #4dc247;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.buttonAgregar:hover {
+    filter: brightness(110%) ;
+}
+
+.ExtraInfo {
+    margin: 4rem 0px;
+    width: 70%;
+    font-size: 18px
+}
