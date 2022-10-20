@@ -4,55 +4,63 @@
         "idcategoria": 1,
         "nombre": "Reloj Horus",
         "precio": 24900,
-        "img": "reloj_horus.png"
+        "img": "https://firebasestorage.googleapis.com/v0/b/watchme-3e199.appspot.com/o/reloj_horus.png?alt=media&token=bcb341aa-be4f-4769-afe6-f5436ac2fcf5",
+        "stock": 20
     },
     {
         "id": 2,
         "idcategoria": 1,
         "nombre": "Reloj Brown",
         "precio": 24900,
-        "img": "reloj_brown.png"
+        "img": "https://firebasestorage.googleapis.com/v0/b/watchme-3e199.appspot.com/o/reloj_brown.png?alt=media&token=8571d65e-bafd-401d-aed6-6f87534904f6",
+        "stock": 15 
     },
     {
         "id": 3,
         "idcategoria": 1,
         "nombre": "Reloj Black",
         "precio": 24900,
-        "img": "reloj_black.png"
+        "img": "https://firebasestorage.googleapis.com/v0/b/watchme-3e199.appspot.com/o/reloj_black.png?alt=media&token=32ef4863-6197-4bcc-9aa1-7787eaa91ee3",
+        "stock": 18 
     },
     {
         "id": 4,
         "idcategoria": 1,
         "nombre": "Reloj White",
         "precio": 24900,
-        "img": "reloj_white.png"
+        "img": "https://firebasestorage.googleapis.com/v0/b/watchme-3e199.appspot.com/o/reloj_white.png?alt=media&token=81b0c959-b647-48e7-be89-cf38c008e1f0",
+        "stock": 12 
     },
     {
         "id": 5,
         "idcategoria": 2,
         "nombre": "Lente Black",
         "precio": 15000,
-        "img": "lentes_black.png"
+        "img": "https://firebasestorage.googleapis.com/v0/b/watchme-3e199.appspot.com/o/lentes_black.png?alt=media&token=52cadc31-cde2-4792-a126-a4a19075a976",
+        "stock": 24
     },
     {
         "id": 6,
         "idcategoria": 2,
         "nombre": "Lente Blue",
         "precio": 15000,
-        "img": "lentes_blue.png"
+        "img": "https://firebasestorage.googleapis.com/v0/b/watchme-3e199.appspot.com/o/lentes_blue.png?alt=media&token=6686c20d-7a24-4849-825a-4d6c94de7eec",
+        "stock": 20
     },
     {
         "id": 7,
         "idcategoria": 2,
         "nombre": "Lente Brown",
         "precio": 15000,
-        "img": "lentes_brown.png"
+        "img": "https://firebasestorage.googleapis.com/v0/b/watchme-3e199.appspot.com/o/lentes_brown.png?alt=media&token=8fb4cdcc-9043-4e4a-abcf-9db3e19f64ac",
+        "stock": 12
     },
     {
         "id": 8,
         "idcategoria": 2,
         "nombre": "Lente Green",
         "precio": 15000,
-        "img": "lentes_green.png"
+        "img": "https://firebasestorage.googleapis.com/v0/b/watchme-3e199.appspot.com/o/lentes_green.png?alt=media&token=cec870ed-a2b1-4e62-9c4f-ff2ed8954c87",
+        "stock": 10
     }
 ]

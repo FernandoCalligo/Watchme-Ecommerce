@@ -1,34 +1,45 @@
-import React,{useEffect, useState} from 'react';
-import { useParams } from 'react-router-dom';
+import React,{ useState, useContext} from 'react';
+import { CarritoContext } from '../context/CarritoContext';
 import "../styles/ItemDetail.css"
-import Contcantidad from './Contcantidad';
+import { Link } from 'react-router-dom';
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({producto}) => {
 
-    const [producto, setproducto] = useState([]);
-    const {id} = useParams()
-    useEffect(() => {
-        fetch(`${process.env.PUBLIC_URL}/json/productos.json`)
-        .then(res => res.json())
-        .then(productos => {
-            const producto1 = productos.find(productoArray => productoArray.id == id)
-            setproducto(producto1)
-        })
-    }, []);
+    const {agregarProducto} = useContext(CarritoContext)
+
+    const [cantidad, setCantidad] = useState(1);
+
+    console.log(producto)
+
+    const cantProducto = (operacion) => {
+        if(operacion == "+") {
+            if(cantidad < producto[1].stock) {
+              setCantidad(cantidad + 1)
+            }   
+        } else {
+          if(cantidad > 1) {
+            setCantidad(cantidad - 1)
+          }
+      }
+    }
 
     return (
         <>
             <div className='DetailCont'>
                 <div className='DetailContInf'>
                     <div className="imgCont">
-                        <img src={`${process.env.PUBLIC_URL}/img/${producto.img}`} alt={`${producto.img}`} />
+                        <img src={producto[1].img} alt={producto[1].nombre} />
                     </div>
                     <div className="infoCont">
                         <h2>{producto.nombre}</h2>
-                        <p className="DetailPrecio">${producto.precio}</p>
-                        <p className="DetailPrecio">6 cuotas sin interes de ${producto.precio / 6}</p>
-                        <Contcantidad></Contcantidad>
-                        <button className='btn btn-success'>Agregar al carrito</button>                    
+                        <p className="DetailPrecio">${producto[1].precio}</p>
+                        <p className="DetailPrecio">6 cuotas sin interes de ${producto[1].precio / 6}</p>
+                        <div className='contCantidad'>
+                            <button type="button" className="btn btn-secondary btn-sm" onClick={() => cantProducto("-")}>-</button>
+                                <span>{cantidad}</span>
+                            <button type="button" className="btn btn-secondary btn-sm" onClick={() => cantProducto("+")}>+</button>
+                        </div>
+                        <Link to={"/carrito"}><button className='btn btn-success' onClick={() => agregarProducto(producto, cantidad)}>Agregar al carrito</button></Link>                    
                     </div>
                 </div>
                 

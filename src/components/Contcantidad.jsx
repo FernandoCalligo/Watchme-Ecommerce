@@ -1,11 +1,13 @@
 import React,{useState} from 'react';
 
-const Contcantidad = () => {
+const Contcantidad = ({stock}) => {
 
     const [cantidad, setcantidad] = useState(1);
     const actualizarcant = (operacion) => {
         if (operacion == "+") {
-            setcantidad(cantidad + 1)
+            if (cantidad < stock) {
+                setcantidad(cantidad + 1)
+            }
         } else if ( cantidad > 1) {
             setcantidad(cantidad - 1)
         }

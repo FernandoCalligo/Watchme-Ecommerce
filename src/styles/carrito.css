@@ -1,0 +1,67 @@
+
+.carritoInfo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 24px;
+    width: 50vw;
+    height: fit-content;
+}
+
+.carritoInfo img {
+    width: 280px;
+}
+
+.carritoDet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
+}
+
+.carritoDet h1 {
+    font-size: 28px;
+    padding: 0 0 15px 0;
+}
+
+.btnBorrar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 24px;
+    border: none;
+    background-color: #fff;
+}
+
+.btnBorrar svg {
+    width: 24px;
+    height: 24px;
+    transition: 200ms ease-in-out all;
+}
+
+.btnBorrar svg:hover {
+    transform: scale(1.2);
+}
+
+.finalizarCompra {
+    display: flex;
+    justify-content: space-around;
+    margin: 24px;
+}
+
+.finalizarCompra .btn {
+    width: 20%;
+}
+.Total {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.err {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 24px;
+}

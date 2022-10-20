@@ -1,12 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import "../styles/Home.css"
+import Homegrid from '../components/Homegrid';
+import HomePortada from '../components/HomePortada';
+import HomeNewsletter from '../components/HomeNewsletter';
 
 const Home = () => {
 
     return (
         <>
-            <button className='btn btn-success'><Link className='nav-link active' to={"/productos"}>Ver todos los productos</Link></button>
+            <HomePortada/>
+            <HomeNewsletter/>
+            <Homegrid/>
         </>
     );
 }

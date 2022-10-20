@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react';
+import { getProductos } from '../utils/firebase';
 import '../styles/ItemListConteiner.css'
 import { Link } from 'react-router-dom';
 
@@ -6,17 +7,12 @@ const Producto = () => {
     const [producto, setProducto] = useState([]);
 
     useEffect(() => {
-        const consultarbdd = async () => {
-            const res = await fetch(`${process.env.PUBLIC_URL}/json/productos.json`) // ${process.env.PUBLIC_URL} utilice esto porque no podia acceder a la carpeta public
-            const productos = await res.json()
-
-            /* console.log(productos) */
-
+        getProductos().then(productos => {
             const card = productos.map(prod =>
             <div className='row'>
-                <div className="cont">
+                <div className="cont" key={prod[0]}>
                     <div className="circle"></div>
-                    <img src={`${process.env.PUBLIC_URL}/img/${prod.img}`} alt="" />
+                    <img src={prod[1].img} alt="" />
                     <div className="info">
                         <div className="infoIcon">
                             <div className="icon">
@@ -28,18 +24,19 @@ const Producto = () => {
                     </div>
                 </div>
                 <div className='detallesprod'>
-                    <p className='nombreprod'>{prod.nombre}</p>
-                    <p className='precioprod'>${prod.precio}</p>
+                    <p className='nombreprod'>{prod[1].nombre}</p>
+                    <p className='precioprod'>${prod[1].precio}</p>
                 </div>
-                <span>6 cuotas sin interes de ${prod.precio / 6}</span>
-                <button class="btn btn-primary"><Link className='nav-link active' to={`/item/${prod.id}`}>Ver Producto</Link></button>
+                <span>6 cuotas sin interes de ${prod[1].precio / 6}</span>
+                <button class="btn btn-primary"><Link className='nav-link active' to={`/item/${prod[0]}`}>Ver Producto</Link></button>
             </div>
             )
 
-            return card
-        }
+            setProducto(card)
 
-        consultarbdd().then(producto => setProducto(producto))
+        })
+
+
     }, []);
     return (
         <>
