@@ -14,19 +14,23 @@ const Navbar = () => {
                     <div className="collapse navbar-collapse" id="navbarColor01">
                         <ul className="navbar-nav me-auto">
                             <li className="nav-item">
-                            <Link className="nav-link active" to="/" >Inicio
-                                <span className="visually-hidden">(current)</span>
-                            </Link>
+                                <Link className="nav-link active navbtn" to="/" >Inicio
+                                    <span className="visually-hidden ">(current)</span>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active" to="/productos/relojes" >Relojes</Link>
+                                <Link className="nav-link active navbtn" to="/productos/relojes" >Relojes</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active" to="/productos/lentes" >Lentes</Link>
+                                <Link className="nav-link active navbtn" to="/productos/lentes" >Lentes</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active" to="/contacto" >Contacto</Link>
+                                <Link className="nav-link active navbtn" to="/contacto" >Contacto</Link>
                             </li>
+                            <li className="nav-item">
+                                <Link className="nav-link active navbtn" to="/checkout" >check</Link>
+                            </li>
+                            
                         </ul>
                         <form className="d-flex">
                             <input className="form-control me-sm-2" type="text" placeholder="Buscar Producto" />

@@ -1,3 +1,20 @@
+
 .brandsize {
   font-size: 28px;
+}
+
+nav {
+  height: 120px;
+}
+
+::-webkit-scrollbar {
+  background-color: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333;
+}
+
+::-webkit-scrollbar-button {
+  background-color: #333;
 }

@@ -1,11 +1,47 @@
 .footercont {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     background-color: #1a1a1a;
     color: #fff;
     padding: 2rem;
 }
 
-.footercont h1 {
+.iconwithe {
+    fill: #fff;
+    transition: 600ms ease all;
+}
+.footercont h2 {
+    font-size: 18px;
     color: #fff;
+}
+
+.redes {
+    display: flex;
+    padding: 24px;
+    gap: 25px
+}
+
+
+.redesBtn {
+    background-color: #1a1a1a;
+    border: none;
+    transition: 400ms ease-in all;
+}
+
+.redesBtn:hover {
+    transform: scale(1.3);
+}
+
+.insta:hover {
+    fill: #E1306C;
+}
+
+.face:hover {
+    fill: #4267B2;
+}
+
+.twitter:hover {
+    fill: #1DA1F2;
 }

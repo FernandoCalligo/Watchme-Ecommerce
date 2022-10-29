@@ -7,8 +7,6 @@ const CarritoProvider = (props) => {
     const [carrito, setCarrito] = useState([]);
 
     const agregarProducto = (prod, cant) => {
-        const total = 0
-        const totalaux = 0
         const aux = carrito
         let indice = aux.findIndex(producto => producto.id  == prod.id) //Si existe o no
 
@@ -17,12 +15,11 @@ const CarritoProvider = (props) => {
         } else {
             const id = prod[0]
             const x = prod[1]
-          const prodCarrito = {id, ...x, cantidad: cant}
-          aux.push(prodCarrito)
+            const prodCarrito = {id, ...x, cantidad: cant}  
+            aux.push(prodCarrito)
         }
         setCarrito(structuredClone(aux))
         console.log(carrito)
-        console.log(total)
 
     }
 
@@ -36,14 +33,24 @@ const CarritoProvider = (props) => {
 
     }
 
+    const quitarProductos = () => {
+        const aux = []
+        setCarrito(aux)
+    }
+
     const vertotal = () => {
-        const aux = carrito.precio * carrito.cantidad
-        const total = aux + total
+        return (
+            carrito.reduce((previus, actual) => previus + actual.cantidad * actual.precio, 0)
+        )
+    }
+
+    const isinCarrito = (id) => {
+        return carrito.find(producto => producto.id === id) ? true : false
     }
 
     return (
         <>
-            <CarritoContext.Provider value={{carrito, agregarProducto, quitarProducto, vertotal}}>
+            <CarritoContext.Provider value={{carrito, agregarProducto, quitarProducto, vertotal, isinCarrito, quitarProductos}}>
                     {props.children}
             </CarritoContext.Provider>
         </>

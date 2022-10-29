@@ -9,6 +9,7 @@ import Relojes from './pages/Relojes';
 import Lentes from "./pages/Lentes";
 import Carrito from "./pages/Carrito"
 import Prod from './components/Prod';
+import Checkout from './pages/Checkout';
 
 const App = () => {
 
@@ -23,6 +24,8 @@ const App = () => {
           <Route path='/item/:id' element={<Prod/>} />
           <Route path='/contacto' element={<Contacto/>}></Route>
           <Route path='/carrito' element={<Carrito/>}></Route>
+          <Route path='/checkout' element={<Checkout datos={[]}/>}></Route>
+
       </Routes>
       <Footer/>
     </BrowserRouter>

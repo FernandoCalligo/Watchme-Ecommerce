@@ -4,8 +4,7 @@
 	grid-auto-rows: auto;
     margin: 15px;
     grid-template-areas: 
-      "img1 img2"
-      "img3 img4"; 
+      "img1 img2"; 
     justify-items: center; 
     align-items: center;
     justify-content: center;
@@ -20,16 +19,6 @@
    }
   .cat2 { 
     grid-area: img2;
-    justify-self: stretch; 
-    align-self: stretch; 
-}
-  .cat3 {
-    grid-area: img3;
-    justify-self: stretch; 
-    align-self: stretch; 
-}
-  .cat4 {
-    grid-area: img4; 
     justify-self: stretch; 
     align-self: stretch; 
 }

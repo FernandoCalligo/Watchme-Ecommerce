@@ -1,0 +1,60 @@
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contModal {
+    width: fit-content;
+    min-height: fit-content;
+    background: #fff;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2), 0, 7px, 29px, 0px;
+    padding: 20px;
+
+}
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.encabezado h3 {
+    font-weight: 500;
+    font-size: 16px;
+    color: #1a1a1a;
+}
+
+.cerrarModal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: .3s ease all;
+    border-radius: 5px;
+    color: #1a1a1a;
+}
+
+.cerrarModal:hover {
+    background-color: #e2e2e2;
+}
+
+.cerrarModal svg {
+    width: 70%;
+    height: 70%;
+}

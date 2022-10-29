@@ -15,12 +15,12 @@ const Prod = () => {
     }, [])
 
     if (producto.length != 0) {
-    return (
-            <div>
-                <ItemDetailContainer producto={producto}/>
-   
-            </div>
-    )
+        return (
+                <div>
+                    <ItemDetailContainer producto={producto}/>
+    
+                </div>
+        )
 }}
 
 export default Prod;

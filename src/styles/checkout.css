@@ -1,0 +1,29 @@
+.checkCont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.checkCont h3 {
+    font-size: 48px;
+    margin-bottom: 8rem;
+}
+
+.checkCont p {
+    font-size: 22px;
+}
+
+.checkInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkInfo .important {
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px;
+}
+

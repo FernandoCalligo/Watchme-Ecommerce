@@ -2,14 +2,15 @@ import React, {useContext, useEffect, useState} from 'react';
 import { CarritoContext } from '../context/CarritoContext';
 import { Link } from 'react-router-dom';
 import "../styles/carrito.css"
+import Modal from '../components/modal';
 
 const Carrito = () => {
-    const {carrito, quitarProducto, vertotal} = useContext(CarritoContext)
+    const {carrito, quitarProducto, vertotal, quitarProductos} = useContext(CarritoContext)
     const [carritoLocal, setCarritoLocal] = useState([]);
-
+    const [estadoModal1, cambiarEstadoModal1] = useState(false);
 
     useEffect(() => {
-        const prodMostrar  = carrito.map(producto => 
+        const prodMostrar  = carrito.map(producto =>
             <div className="carritoCont" key={producto.id}>
                 <div className="carritoInfo">
                 <img src={producto.img} alt={producto.nombre} />
@@ -26,18 +27,19 @@ const Carrito = () => {
                     </div>
                 </div>
             </div>
-
             )
+
         setCarritoLocal(prodMostrar)
 
-        console.log (vertotal)
     }, [carrito]);
 
-   const app = (carrito.length != 0) ? <div className='row'> {carritoLocal} <div> <p className='Total'>Total </p> </div> </div> : <div className='err'> <h1>No hay elementos en en el carrito</h1> <Link to={"/"}><button className='btn btn-primary'>Volver al Inicio</button></Link></div>
 
+   const app = (carrito.length != 0) ? <> <div className='EliminarTodo'> <button className='btn btn-danger' onClick={() => quitarProductos()}>Eliminar Todo</button> </div> {carritoLocal} <div className='carritoCheck'><p>Total de la compra: ${vertotal()}</p> <button className='btn btn-success' onClick={() => cambiarEstadoModal1(!estadoModal1)} >Finalizar Compra</button> </div> <Modal estado={estadoModal1} cambiarEstado={cambiarEstadoModal1}></Modal>  </> : <div className='err'> <h1>No hay elementos en en el carrito</h1> <Link to={"/"}><button className='btn btn-primary'>Volver al Inicio</button></Link></div>
+ 
+    console.log(carrito)
     return app
 
-    
+
 }
 
 export default Carrito;

@@ -1,4 +1,4 @@
-import React,{ useState, useContext} from 'react';
+import React,{ useState, useContext, useEffect} from 'react';
 import { CarritoContext } from '../context/CarritoContext';
 import "../styles/ItemDetail.css"
 import { Link } from 'react-router-dom';
@@ -6,10 +6,7 @@ import { Link } from 'react-router-dom';
 const ItemDetailContainer = ({producto}) => {
 
     const {agregarProducto} = useContext(CarritoContext)
-
     const [cantidad, setCantidad] = useState(1);
-
-    console.log(producto)
 
     const cantProducto = (operacion) => {
         if(operacion == "+") {
@@ -31,7 +28,7 @@ const ItemDetailContainer = ({producto}) => {
                         <img src={producto[1].img} alt={producto[1].nombre} />
                     </div>
                     <div className="infoCont">
-                        <h2>{producto.nombre}</h2>
+                        <h2>{producto[1].nombre}</h2>
                         <p className="DetailPrecio">${producto[1].precio}</p>
                         <p className="DetailPrecio">6 cuotas sin interes de ${producto[1].precio / 6}</p>
                         <div className='contCantidad'>
