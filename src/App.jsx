@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Footer from './components/footer';
-import Contacto from './pages/Contacto';
+import Nosotros from './pages/Nosotros';
 import Productos from './pages/Productos';
 import Relojes from './pages/Relojes';
 import Lentes from "./pages/Lentes";
@@ -22,7 +22,7 @@ const App = () => {
           <Route path='/productos/lentes' element={<Lentes categoria={2}/>} />
           <Route path='/productos' element={<Productos/>}></Route>
           <Route path='/item/:id' element={<Prod/>} />
-          <Route path='/contacto' element={<Contacto/>}></Route>
+          <Route path='/nosotros' element={<Nosotros/>}></Route>
           <Route path='/carrito' element={<Carrito/>}></Route>
           <Route path='/checkout' element={<Checkout datos={[]}/>}></Route>
 

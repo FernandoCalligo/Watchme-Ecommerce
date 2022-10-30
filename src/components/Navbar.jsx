@@ -25,12 +25,8 @@ const Navbar = () => {
                                 <Link className="nav-link active navbtn" to="/productos/lentes" >Lentes</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active navbtn" to="/contacto" >Contacto</Link>
+                                <Link className="nav-link active navbtn" to="/nosotros" >Nosotros</Link>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link active navbtn" to="/checkout" >check</Link>
-                            </li>
-                            
                         </ul>
                         <form className="d-flex">
                             <input className="form-control me-sm-2" type="text" placeholder="Buscar Producto" />
