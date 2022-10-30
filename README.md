@@ -1,3 +1,8 @@
+Proyecto final de un Ecommerce de Relojes y Lentes para el curso de ReactJs de CoderHouse, utilizando Firebase como base de datos en la nube y ReactJs para la realización.
+
+
+--------------------------------------------------------------------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
