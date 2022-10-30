@@ -1,4 +1,4 @@
-import React,{ useState, useContext, useEffect} from 'react';
+import React,{ useState, useContext} from 'react';
 import { CarritoContext } from '../context/CarritoContext';
 import "../styles/ItemDetail.css"
 import { Link } from 'react-router-dom';
@@ -9,7 +9,7 @@ const ItemDetailContainer = ({producto}) => {
     const [cantidad, setCantidad] = useState(1);
 
     const cantProducto = (operacion) => {
-        if(operacion == "+") {
+        if(operacion === "+") {
             if(cantidad < producto[1].stock) {
               setCantidad(cantidad + 1)
             }   

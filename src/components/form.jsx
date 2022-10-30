@@ -3,14 +3,14 @@ import "../styles/form.css"
 import { DatosContext } from '../context/datosContext';
 import {createOrden} from "../utils/firebase.js"
 import { CarritoContext } from '../context/CarritoContext';
-import { Router, useNavigate  } from 'react-router-dom';
+import { useNavigate  } from 'react-router-dom';
 
 
 
 const Form = () => {
     const navigate = useNavigate ()
     const {agregarDatos} = useContext(DatosContext)
-    const {quitarProductos, vertotal} = useContext(CarritoContext)
+    const {quitarProductos} = useContext(CarritoContext)
 
     const [datos, setDatos] = useState({
         nombre: "",

@@ -1,3 +1,3 @@
-import { cargarBD } from "./firebase";
+import { } from "./firebase";
 
 // cargarBD();

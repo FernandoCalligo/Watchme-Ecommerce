@@ -10,7 +10,7 @@ const Relojes = ({categoria}) => {
     useEffect(() => {
         getProductos().then(productos => {
             console.log(productos)
-            const newarray = productos.filter(productos => productos[1].idCategoria == categoria)
+            const newarray = productos.filter(productos => productos[1].idCategoria === categoria)
             console.log(newarray)
             const card = newarray.map(prod =>
             <div className='row'>

@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import { getProducto } from '../utils/firebase';
 import ItemDetailContainer from './ItemDetailContainer';
@@ -14,7 +14,7 @@ const Prod = () => {
    
     }, [])
 
-    if (producto.length != 0) {
+    if (producto.length !== 0) {
         return (
                 <div>
                     <ItemDetailContainer producto={producto}/>

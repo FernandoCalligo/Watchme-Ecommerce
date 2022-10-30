@@ -46,6 +46,5 @@ const Producto = () => {
     );
 }
 
-{/* <p>{prodcuto.map(item => <img key={item.id} src={`${process.env.PUBLIC_URL}/img/${item.img}`} alt={item.img} />)}</p> */}
 
 export default Producto;
